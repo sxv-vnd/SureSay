@@ -20,7 +20,92 @@
     </div>
   </header>
 
-  <main class="stage"></main>
+ <main class="stage">
+    <!-- START SCREEN
+     Introduces the purpose of SureSay -->
+    <section id="start" class="panel" style="padding: 0; overflow: hidden;">
+      <div class="hero-section">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="eyebrow">Revision practice</div>
+            <h1>Learn what to <em>trust</em><br>in an AI answer.</h1>
+            <p class="lede">Learn to judge AI-generated answers: use prepared examples and simulated agreement labels to decide which statements to use and which to verify.</p>
+          </div>
+          <!-- Explains the interaction before students begin -->
+          <div class="hero-aside">
+            <div class="how-card">
+              <div class="aside-label">HOW IT WORKS</div>
+              <ol class="how">
+                <li><span class="how-num">1</span><span>Review a prepared example answer divided into statements.</span></li>
+                <li><span class="how-num">2</span><span>For each one, decide whether to keep it or verify it. Labels are an imperfect clue, not a fact-check.</span></li>
+                <li><span class="how-num">3</span><span>See the answer key and a summary of your choices.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setup-section">
+        <div class="setup-inner">
+          
+          <div class="field">
+            <div class="field-header">
+              <span class="field-num">01</span>
+              <div>
+                <label class="field-label">Choose a practice question</label>
+                <p class="hint" style="margin-top: 4px;">Six subjects, each with six statements to judge.</p>
+              </div>
+            </div>
+            <div class="topic-grid" id="topic"></div>
+          </div>
+
+          <hr class="rule">
+
+          <div class="field">
+            <div class="field-header">
+              <span class="field-num">02</span>
+              <div>
+                <label class="field-label">Choose how agreement is displayed</label>
+                <p class="hint" style="margin-top: 4px;">The statements stay the same in both modes. Neither mode identifies errors with certainty.</p>
+              </div>
+            </div>
+
+            <div class="mode" role="group" aria-labelledby="mode-heading">
+              <button type="button" class="mode-card selected" data-mode="claim" aria-pressed="true">
+                <div class="mode-card-top">
+                  <strong>Per statement</strong>
+                  <span class="radio-circle"><span class="radio-dot"></span></span>
+                </div>
+                <small>Each statement gets its own High, Medium or Low agreement label.</small>
+                <div class="chips-row">
+                  <span class="chip High">High agreement</span>
+                  <span class="chip Low">Low agreement</span>
+                  <span class="chip Medium">Medium agreement</span>
+                </div>
+              </button>
+              
+              <button type="button" class="mode-card" data-mode="response" aria-pressed="false">
+                <div class="mode-card-top">
+                  <strong>Whole answer</strong>
+                  <span class="radio-circle"><span class="radio-dot"></span></span>
+                </div>
+                <small>One overall agreement label, without separate labels for each statement.</small>
+                <div class="chips-row">
+                  <span class="chip Medium">Medium agreement</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <hr class="rule">
+
+          <div class="start-action">
+            <p class="hint">Demonstration only: answers and confidence results are pre-recorded. No live AI is used.</p>
+            <button id="begin" class="primary">Start reviewing →</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
