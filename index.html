@@ -106,7 +106,42 @@
         </div>
       </div>
     </section>
+ <!-- REVIEW SCREEN 
+     Displays the selected practice question and its six statements.-->
+    <section id="review" class="panel" hidden>
+      <div class="review-header">
+        <div>
+          <div class="eyebrow">Review the answer</div>
+          <h2 id="review-title"></h2>
+        </div>
+        <button id="back" type="button" class="ghost">← Change settings</button>
+      </div>
 
+      <div class="question">
+        <small>Practice question</small>
+        <strong id="question"></strong>
+      </div>
+
+      <p class="instructions">For each statement, choose <strong>Keep for revision</strong> if you would use it without further checking, or <strong>I would verify this</strong> if you would consult a source first. Choosing to verify records your intention; it does not automatically fact-check the claim.</p>
+
+      <div id="legend" class="notice" hidden></div>
+      <div id="overall" class="notice" hidden></div>
+
+      <div class="progress-wrap">
+        <div class="progress-label-row">
+          <strong id="progress-label"></strong>
+        </div>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill" style="width: 0%"></div></div>
+      </div>
+
+      <div id="claims"></div>
+
+      <div class="bottom">
+        <span class="hint" id="warning" role="status"></span>
+        <button id="submit" class="primary" disabled>See my results →</button>
+      </div>
+    </section>
+  </main>
   <footer class="site-footer">
     <div class="site-footer-inner">
       <div class="logo logo--sm">Sure<span>Say</span></div>
